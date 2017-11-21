@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Examen de Lógica</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/customstyle.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.js" ></script>
+    <script src="assets/bootstrap4/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Examen de Lógica</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarheader" aria-controls="navbarheader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarheader">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item d-lg-none d-md-none">
+              <a class="nav-link active" item-idx="0" href="#">Inicio <span class="sr-only"></span></a>
+            </li>
+              <li class="nav-item d-lg-none d-md-none ">
+                <a class="nav-link" item-idx="1" href="#">Ejercicio 1</a>
+              </li>
+              <li class="nav-item d-lg-none d-md-none">
+                <a class="nav-link" item-idx="2" href="#">Ejercicio 2</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-2 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" item-idx="0" href="#">Inicio <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" item-idx="1" href="#">Ejercicio 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" item-idx="2" href="#">Ejercicio 2</a>
+            </li>
+          </ul>
+        </nav>
+        <main role="main" item-idx="0" class="bg_pattern view col-sm-10 ml-sm-auto col-md-10 pt-3">
+          <h1>Inicio</h1>
+          <section class="row text-center ">
+            <div class="col-md-12 col-sm-12 text-left">
+              <p>Examen de lógica con dos ejercicios utilizando vectores en el lenguaje JavaScript. 
+                <br> Tecnologías utilizadas: Servidor Apache, html, Js (Jquery), (Css) Bootstrap.
+                <br> Desarrollado por <a href="https://www.linkedin.com/in/robertvp" target="_blank" >Robert Vega.</a> </p>
+            </section>
+          </section>
+        </main>
+        <main role="main" item-idx="1" style="display: none;" class="bg_pattern view col-sm-10 ml-sm-auto col-md-10 pt-3">
+          <h1>Ejercicio 1</h1>
+          <button id="btn_reiniciar_1" class="btn btn-default" type="button" >Reiniciar</button>
+          
+          <section class="row text-center ">
+            <div class="col-md-6 col-sm-3 text-center">
+              <h4>Vector de Hombres</h4>
+              <form id="form_hombres" class="form-inline">
+                <div class="form-group">
+                  <input type="text" name="hombre" value="" placeholder="Hombre" id="input_hombre" class="form-control" >
+                  <button type="button"  type="button" id="btn_hombre_add" class="btn btn-success form-control" >+</button>
+                </div>
+              </form>
+               <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-muted" >Hombres</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_hombres">
+                    <tr>
+                        <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-3 text-center">
+              
+              <h4>Vector de Mujeres</h4>
+              <form id="form_mujeres" class="form-inline">
+                <div class="form-group">
+                  <input type="text" name="mujer" value="" placeholder="Mujer" id="input_mujer" class="form-control" >
+                  <button type="button" type="button" id="btn_mujer_add" class="btn btn-success form-control" >+</button>
+                </div>
+              </form>
+               <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-muted">Mujeres</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_mujeres">
+                    <tr>
+                        <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <h2>Vector Resultante</h2> <button type="button" id="btn_sumar" class="btn btn-primary" >Sumar Vectores</button>
+          <section class="row text-center ">
+            <div class="col-md-6 col-sm-3">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Resultado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_resultado" >
+                    <tr>
+                      <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-3">
+              <h4>Total de Letras:</h4>
+              <div class="text-muted" id="total_chars"></div>
+            </div>
+          </section>
+        </main>
+        <main role="main" item-idx="2" style="display: none;" class="bg_pattern view col-sm-10 ml-sm-auto col-md-10 pt-3">
+          <h1>Ejercicio 2</h1>
+            <button id="btn_reiniciar_2" class="btn btn-default" type="button" >Reiniciar</button>
+             <br><br>
+          <section class="row text-center ">
+              <div class="view_paso1 col-md-12 col-sm-12 text-left">
+                <label class="muted-text">Ingresa el total de enteros para el vector</label>
+                <form id="form_enteros_total" class="form-inline">
+                  <div class="form-group">
+                    <input type="number" name="total_enteros" value="" placeholder="7" id="input_total_enteros" class="form-control" >
+                    <button type="button"  type="button" id="btn_siguiente" class="btn btn-primary" >Siguiente</button>
+                  </div>
+                </form>
+              </div>
+              <div style="display:none;" class="view_paso2 col-md-6 col-sm-3 text-left">
+                <h4>Vector de Enteros </h4>
+                <label id="label_enteros" class="text-left text-muted" >(0/0)</label>
+                <form id="form_enteros" class="form-inline">
+                  <div class="form-group">
+                    <input type="number" name="entero" value="" placeholder="0" id="input_entero" class="form-control" >
+                    <button type="button"  type="button" id="btn_entero_add" class="btn btn-success" >+</button>
+                  </div>
+                </form>
+                <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-muted" >Vector Enteros</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_enteros">
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              <div style="display:none;" class="view_paso2 col-md-6 col-sm-3 text-left">
+                 <h4>Resultado</h4><label class="text-muted" >Imprime el vector en el orden en el que fueron agregados.</label> <button type="button" class="btn btn-success" id="btn_entero_resultado" >Imprimir Vector</button>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-muted" >Resultado</th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_enteros_resultado">
+                  </tbody>
+                </table>
+              </div>
+              </div>
+          </section>
+        </main>
+
+      </div>
+    </div>
+      <!-- Mensaje generico modal -->
+      <div class="modal fade" id="modal_mensaje">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Aviso</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="modal_mensaje_texto" class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    <script src="controller/controller.js?n=1" ></script>
+  </body>
+</html>
